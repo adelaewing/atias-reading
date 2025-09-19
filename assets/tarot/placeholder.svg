@@ -1,0 +1,45 @@
+<svg width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for gradient and filters -->
+  <defs>
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b0f2e" />
+      <stop offset="100%" stop-color="#2a0f45" />
+    </linearGradient>
+    
+    <filter id="starGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Card background -->
+  <rect x="10" y="10" width="180" height="300" rx="12" ry="12" 
+        fill="url(#cardGradient)" 
+        stroke="#c4b5fd" 
+        stroke-width="2" />
+  
+  <!-- Centered star with glow -->
+  <polygon points="100,80 120,140 185,140 130,180 150,240 100,200 50,240 70,180 15,140 80,140" 
+           fill="#a78bfa" 
+           stroke="#c4b5fd" 
+           stroke-width="1.5"
+           filter="url(#starGlow)" />
+  
+  <!-- Small decorative stars -->
+  <polygon points="40,60 45,70 55,70 47,77 50,87 40,82 30,87 33,77 25,70 35,70" 
+           fill="#a78bfa" opacity="0.6" />
+  <polygon points="160,70 165,80 175,80 167,87 170,97 160,92 150,97 153,87 145,80 155,80" 
+           fill="#a78bfa" opacity="0.6" />
+  <polygon points="70,230 75,240 85,240 77,247 80,257 70,252 60,257 63,247 55,240 65,240" 
+           fill="#a78bfa" opacity="0.6" />
+  <polygon points="140,230 145,240 155,240 147,247 150,257 140,252 130,257 133,247 125,240 135,240" 
+           fill="#a78bfa" opacity="0.6" />
+  
+  <!-- Tarot text at bottom -->
+  <text x="100" y="280" 
+        font-family="serif" 
+        font-size="18" 
+        text-anchor="middle" 
+        fill="white" 
+        opacity="0.4">Tarot</text>
+</svg>
